@@ -19,3 +19,21 @@ This project is not intended for production use.
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Vite](https://vitejs.dev/) (for fast development server and bundling)
+
+## Notes:
+
+**In React, the value attribute in select elements serves several important purposes that are different from traditional HTML forms:**
+
+- Controlled Components: In React, form elements like `<select>` are typically used as "controlled components" where React manages the state of the form element. The value attribute is used to specify which option is currently selected, binding it directly to React state.
+
+- Single Source of Truth: React follows a pattern where your component state becomes the "single source of truth" for form data. The value attribute connects the select element to this state.
+
+- Programmatic Control: Having the value attribute allows you to programmatically control which option is selected based on your application logic or user interactions elsewhere in your app.
+
+- Form Submissions: When handling form submissions in React, the value attribute makes it easy to access the currently selected option through your state, rather than having to query the DOM.
+
+- Dynamic Updates: You can dynamically update which option is selected in response to other user interactions or data changes.
+
+```js
+<select id="category" value={activity.category} onChange={handleChange}>
+```
